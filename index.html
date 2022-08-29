@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script charset="utf-8" src="app.js"></script>
+        <link rel='stylesheet' href='app.css' type='text/css' />
+    </head> 
+    <body>
+         <!-- Wrapper-->
+         <div class="wrapper">
+        <div >
+            <header class="header">
+                <h1 id="title" class="description-text-center"> Kenneth & Nelson Survey Form</h1>
+                <p id="description" class="description-text-center">
+                    Please  take your time to fill this form. your feedback is important to us
+                </p>
+            </header>
+        </div>
+       
+        <div class="form">
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" class="labels">Name</label><br>
+                <input id="name" class="form-input" type="text" placeholder="e.g: Borr Kenneth" required/>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label">Email</label><br>
+                <input  type="email" id="email" class="form-input" placeholder="e.g: myname@gmail.com" required
+                />
+            </div>
+
+            <div class="form-group">
+                <label id="number-label">Age</label><br>
+                <input id="number" class="form-input" min="18" max="100" placeholder="Optional"/>
+            </div>
+
+            <div class="form-group">
+                <p >Which option best describes your profession?</p>
+                <select id="dropdown" name="role" class="form-input" required>
+                    <option disabled selected value>Select your best fit</option>
+                    <option value="student">Engineering</option>
+                    <option value="job">Agriculture</option>
+                    <option value="learner">Banking</option>
+                    <option value="preferNo">Sporting</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <p>Would you recommend this site to a friend?</p>
+                <label>
+                    <input class="radios"
+                        name="user-recommend" 
+                        value="definitely" 
+                        type="radio" 
+                        
+                    /> Definitely
+                </label>
+                <label>
+                    <input class="radios"
+                        name="user-recommend" 
+                        value="maybe" 
+                        type="radio" 
+                        
+                    />Maybe
+                </label>
+                <label>
+                    <input 
+                        name="user-recommend" 
+                        value="not-sure" 
+                        type="radio" 
+                        class="radios"
+                    />Not sure
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>What improvements do you want to see?</p> 
+                <label
+                    ><input
+                        name="prefer"
+                        value="data-visualization"
+                        type="checkbox"
+                        class="checkboxes"
+                    />Data Visualization
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="challenges"
+                        type="checkbox"
+                        class="checkboxes"
+                    />Challenges
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="open-source-community"
+                        type="checkbox"
+                        class="checkboxes"
+                    />Open Source Community
+                </label>
+
+                <label>
+                    <input
+                        name="prefer"
+                        value="videos"
+                        type="checkbox"
+                        class="checkboxes"
+                    />Videos
+                </label>
+
+                <label>
+                    <input
+                        name="prefer"
+                        value="forum"
+                        type="checkbox"
+                        class="checkboxes"
+                    />Forum
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="additional-courses"
+                        type="checkbox"
+                        class="checkboxes"
+                    />Additional Courses
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea class="form-input"
+                    id="comments"
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Enter your comment here...">
+                </textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button" onclick="ValidateEmail(document.survey-form.email)">
+                    Submit
+                </button>
+            </div>
+        </form>
+        </div>
+        <script src="app.js"></script>
+        </div>
+        
+    </body>
+</html>
